@@ -1,0 +1,8 @@
+Session data: Array
+(
+    [farmer_id] => FMR-22414-638
+)
+
+Logged in farmer ID: FMR-22414-638
+Query result rows: 1
+Success - JSON output: {"status":"success","data":{"farmer_id":"FMR-22414-638","first_name":"Johnson","middle_name":"Emmanuel","last_name":"John","phone":"0687692312","email":"johnsonemmanuel1425@gmail.com","village":"BUJINGWA","ward":"ILEMELA","district":"ILEMELA","farm_count":0}}
