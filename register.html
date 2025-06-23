@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmer Registration</title>
+  <link rel="stylesheet" href="css/register.css" />
+  <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <img src="icons/1200px-COAT_OF_ARMS_OF_TANZANIA.SVG.PNG" alt="Logo" class="logo" />
+      <a href="index.html" class="sign-in">MINISTRY OF AGRICULTURE</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="login.html" class="sign-in">SIGN IN</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Farmer Registration</h2>
+      <form id="registrationForm" method="POST" action="php/register.php">
+        <fieldset>
+          <legend>Personal Detail</legend>
+          <div class="row">
+            <input type="text" name="first_name" placeholder="First Name" required />
+            <input type="text" name="middle_name" placeholder="Middle Name" required />
+            <input type="text" name="last_name" placeholder="Last Name" required />
+          </div>
+          <div class="row">
+            <input type="text" name="phone" placeholder="Phone Number" required />
+            <input type="email" name="email" placeholder="Email (optional)" />
+          </div>
+          <div class="row">
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Residence</legend>
+          <div class="row">
+            <input type="text" name="village" placeholder="Village" required />
+            <input type="text" name="ward" placeholder="Ward" required />
+            <input type="text" name="district" placeholder="District" required />
+          </div>
+        </fieldset>
+
+        <div class="submit-row">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-card" id="popupContent"></div>
+  </div>
+
+<div id="popupCard" style="
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid;
+    padding: 20px;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    min-width: 300px;">
+    <span id="popupMessage"></span>
+</div>
+
+<div id="successPopup" class="popup-card" style="display:none;">
+    <h2>Registration Successful!</h2>
+    <p>Your Farmer ID: <span id="popupFarmerId"></span></p>
+    <p>You will be redirected to login shortly...</p>
+</div>
+
+<footer class="footer">
+  <p>2025 | Ministry of Agriculture</p>
+</footer>
+
+<script src="js/register.js"></script>
+</body>
+</html>

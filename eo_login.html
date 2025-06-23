@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Extension Officer Login</title>
+    <link rel="stylesheet" href="css/eo_login.css">
+    <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+    <script defer src="js/eo_login.js"></script>
+</head>
+<body>
+    <header class="top-bar">
+        <div class="left">
+            <img src="icons/1200px-Coat_of_arms_of_Tanzania.svg.png" alt="Coat of Arms">
+            <a href="index.html">MINISTRY OF AGRICULTURE</a>
+        </div>
+    </header>
+
+    <main class="content-wrapper"> <div class="login-container">
+            <h2>Extension Officer Login</h2>
+            <form id="loginForm" action="php/eo_login.php" method="POST">
+                <div class="input-group">
+                    <label for="officer_id">Officer ID:</label>
+                    <input type="text" id="officer_id" name="officer_id" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div id="loginMessage" style="color: red; margin-top: 10px;"></div>
+            </form>
+        </div>
+    </main>
+
+<footer class="fixed-footer">
+    <p>© 2025 Ministry of Agriculture</p>
+</footer>
+
+</body>
+</html>

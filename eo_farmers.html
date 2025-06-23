@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmers List</title>
+    <link rel="stylesheet" href="css/eo_farmers.css">
+    <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+    <script defer src="js/eo_farmers.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+    <button id="toggleSidebar" class="menu-btn">&#9776;</button>
+    <div class="system-title">EXTENSION OFFICER DASHBOARD</div>
+    <div class="topbar-right">
+        <span class="officer-id">Officer</span>
+        <a href="php/eo_logout.php" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <h4>CORE</h4>
+      <a href="eo_dashboard.html"><img src="icons/home.png" alt=""> Dashboard</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACTIVITIES</h4>
+      <a href="eo_farmers.html" class="active"><img src="icons/farmer.png" alt=""> Farmers</a>
+      <a href="eo_pending_farms.html"><img src="icons/pending.png" alt=""> Pending Farms</a>
+      <a href="eo_verified_farms.html"><img src="icons/farm.png" alt=""> Verified Farms</a>
+      <a href="eo_market_price.html"><img src="icons/market.png" alt=""> Market Price</a>
+      <a href="eo_production_trends.html"><img src="icons/chart.png" alt=""> Production Trends</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACCOUNT</h4>
+      <a href="eo_profile.html"><img src="icons/profile.png" alt=""> Profile</a>
+    </div>
+  </div>
+
+    <div class="main">
+        <div class="section-header">
+            <h2>Farmers List</h2>
+            <button id="addFarmerBtn" class="add-btn">+ Add Farmer</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Farmer ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Village</th>
+                        <th>Ward</th>
+                        <th>District</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="farmersTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="popup-form" id="farmerForm">
+    <form id="addFarmerForm">
+        <h3>Add Farmer</h3>
+        <!-- Added name attributes to all inputs for FormData -->
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="middle_name" placeholder="Middle Name">
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="text" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="village" placeholder="Village" required>
+        <input type="text" name="ward" placeholder="Ward" required>
+        <input type="text" name="district" placeholder="District" required>
+        <div class="form-actions">
+            <button type="submit" class="submit-btn">Add</button>
+            <button type="button" class="cancel-btn" id="cancelFarmerFormBtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<!-- Custom Delete Confirmation Pop-up for Farmers -->
+<div class="custom-confirm-popup" id="deleteFarmerConfirmPopup">
+    <div class="confirm-card">
+        <h3>Confirm Deletion</h3>
+        <p id="confirmFarmerMessage">Are you sure you want to delete this farmer record?</p>
+        <div class="confirm-buttons">
+            <button id="confirmDeleteFarmerBtn" class="confirm-yes">Yes, Delete</button>
+            <button id="cancelDeleteFarmerBtn" class="confirm-no">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">© 2025 Ministry of Agriculture</div>
+
+</body>
+</html>

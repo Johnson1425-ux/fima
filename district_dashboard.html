@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>District Officer Dashboard</title>
+    <link rel="stylesheet" href="css/district_dashboard.css">
+    <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+    <script defer src="js/district_dashboard.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+    <button id="toggleSidebar" class="menu-btn">&#9776;</button>
+    <div class="system-title">DISTRICT OFFICER DASHBOARD</div>
+    <div class="topbar-right">
+        <span class="officer-id">DO12345</span>
+        <a href="#" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <h4>CORE</h4>
+            <a href="district_dashboard.html" class="active"><img src="icons/home.png" alt=""> Dashboard</a>
+        </div>
+        <div class="sidebar-section">
+            <h4>ACTIVITIES</h4>
+            <a href="district_farmers.html"><img src="icons/farmer.png" alt=""> Farmers</a>
+            <a href="district_farms.html"><img src="icons/farm.png" alt=""> Farms</a>
+            <a href="district_extension_officers.html"><img src="icons/officer.png" alt=""> Extension Officers</a>
+            <a href="district_market_price.html"><img src="icons/market.png" alt=""> Market Price</a>
+            <a href="district_production_trends.html"><img src="icons/chart.png" alt=""> Production Trends</a>
+        </div>
+        <div class="sidebar-section">
+            <h4>ACCOUNT</h4>
+            <a href="district_profile.html"><img src="icons/profile.png" alt=""> Profile</a>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <div class="card-container">
+            <a href="district_farms.html" class="card">
+                <img src="icons/farm.png" alt="Farms">
+                <div class="card-title">Farms</div>
+                <div class="card-count">0</div>
+            </a>
+            <a href="district_farmers.html" class="card">
+                <img src="icons/farmer.png" alt="Farmers">
+                <div class="card-title">Farmers</div>
+                <div class="card-count">0</div>
+            </a>
+            <a href="district_extension_officers.html" class="card">
+                <img src="icons/officer.png" alt="Officers">
+                <div class="card-title">Extension Officers</div>
+                <div class="card-count">0</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">© 2025 Ministry of Agriculture</div>
+
+</body>
+</html>

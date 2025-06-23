@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pending Farms - Extension Officer</title>
+    <link rel="stylesheet" href="css/eo_pending_farms.css">
+    <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+    <script defer src="js/eo_pending_farms.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+    <button id="toggleSidebar" class="menu-btn">&#9776;</button>
+    <div class="system-title">EXTENSION OFFICER</div>
+    <div class="topbar-right">
+        <span class="officer-id">Officer ID</span>
+        <a href="php/eo_logout.php" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <h4>CORE</h4>
+      <a href="eo_dashboard.html"><img src="icons/home.png" alt=""> Dashboard</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACTIVITIES</h4>
+      <a href="eo_farmers.html"><img src="icons/farmer.png" alt=""> Farmers</a>
+      <a href="eo_pending_farms.html" class="active"><img src="icons/pending.png" alt=""> Pending Farms</a>
+      <a href="eo_verified_farms.html"><img src="icons/farm.png" alt=""> Verified Farms</a>
+      <a href="eo_market_price.html"><img src="icons/market.png" alt=""> Market Price</a>
+      <a href="eo_production_trends.html"><img src="icons/chart.png" alt=""> Production Trends</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACCOUNT</h4>
+      <a href="eo_profile.html"><img src="icons/profile.png" alt=""> Profile</a>
+    </div>
+  </div>
+
+    <div class="main" id="main">
+        <h2>Pending Farm Verification Requests</h2>
+        <table class="farm-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Farm ID</th>
+                    <th>Farmer ID</th>
+                    <th>Farm Name</th>
+                    <th>Size (acres)</th>
+                    <th>Village</th>
+                    <th>Ward</th>
+                    <th>District</th>
+                    <th>Crops</th>
+                    <th>Date Registered</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="farmTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="custom-confirm-popup" id="verifyConfirmPopup">
+    <div class="confirm-card">
+        <h3>Confirm Verification</h3>
+        <p id="verifyConfirmMessage">Are you sure you want to verify this farm?</p>
+        <div class="confirm-buttons">
+            <button id="confirmVerifyBtn" class="confirm-yes verify-btn-confirm">Yes, Verify</button>
+            <button id="cancelVerifyBtn" class="confirm-no">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="custom-confirm-popup" id="rejectConfirmPopup">
+    <div class="confirm-card">
+        <h3>Confirm Rejection</h3>
+        <p id="rejectConfirmMessage">Are you sure you want to reject this farm?</p>
+        <div class="confirm-buttons">
+            <button id="confirmRejectBtn" class="confirm-yes reject-btn-confirm">Yes, Reject</button>
+            <button id="cancelRejectBtn" class="confirm-no">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">© 2025 Ministry of Agriculture</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Login</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="left">
+      <img src="icons/1200px-Coat_of_arms_of_Tanzania.svg.png" alt="Coat of Arms">
+      <a href="index.html">MINISTRY OF AGRICULTURE</a>
+    </div>
+    <div class="right"><a href="register.html">Register</a></div>
+  </header>
+
+  <main>
+    <div class="login-card">
+      <h2>Farmer Login</h2>
+      <form action="php/login.php" method="POST">
+        <label for="farmer_id">Farmer ID</label>
+        <input type="text" name="farmer_id" id="farmer_id" placeholder="Enter your Farmer ID" required>
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+
+        <button type="submit">Login</button>
+
+        <div class="error" id="error-box">
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="fixed-footer">
+    2025 | Ministry of Agriculture
+  </footer>
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+    if (error) {
+      document.getElementById("error-box").textContent = decodeURIComponent(error);
+      document.getElementById("error-box").style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Farms</title>
+    <link rel="stylesheet" href="css/my_farms.css">
+    <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+    <script defer src="js/my_farms.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+    <button id="toggleSidebar" class="menu-btn">&#9776;</button>
+    <div class="system-title">FARMER DASHBOARD</div>
+    <div class="topbar-right">
+        <span class="farmer-id">Farmer_001</span>
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <h4>CORE</h4>
+            <a href="dashboard.html"><img src="icons/home.png" alt=""> Dashboard</a>
+        </div>
+        <div class="sidebar-section">
+            <h4>ACTIVITIES</h4>
+            <a href="my_farms.html" class="active"><img src="icons/farm.png" alt=""> My Farms</a>
+            <a href="register_output.html"><img src="icons/output.png" alt=""> Farm Output</a>
+        </div>
+        <div class="sidebar-section">
+            <h4>ACCOUNT</h4>
+            <a href="profile.html"><img src="icons/profile.png" alt=""> Profile</a>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <div class="section-header">
+            <h2>My Farms</h2>
+            <button class="add-btn" id="openFormBtn">+ Add Farm</button>
+        </div>
+
+        <table class="farm-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Farm Name</th>
+                    <th>Size (acres)</th>
+                    <th>Village</th>
+                    <th>Ward</th>
+                    <th>District</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="farmTableBody">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="popup-form" id="popupForm">
+    <div class="form-card">
+        <h3>Register Farm</h3>
+        <form id="farmForm">
+            <input type="text" id="farmName" name="farm_name" placeholder="Farm Name" required>
+            <input type="number" id="farmSize" name="size_acres" placeholder="Size (acres)" required>
+            <input type="text" id="village" name="village" placeholder="Village" required>
+            <input type="text" id="cropType" name="crop_type" placeholder="Crop Type" required>
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="button" class="cancel-btn" id="cancelFormBtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="custom-confirm-popup" id="deleteConfirmPopup">
+    <div class="confirm-card">
+        <h3>Confirm Deletion</h3>
+        <p id="confirmMessage">Are you sure you want to delete this farm record?</p>
+        <div class="confirm-buttons">
+            <button id="confirmDeleteBtn" class="confirm-yes">Yes, Delete</button>
+            <button id="cancelDeleteBtn" class="confirm-no">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="footer">© 2025 Ministry of Agriculture</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - District Officer</title>
+  <link rel="stylesheet" href="css/district_profile.css">
+  <link rel="icon" href="icons/1200px-Coat_of_arms_of_Tanzania.svg.png">
+  <script defer src="js/district_profile.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <button id="toggleSidebar" class="menu-btn">&#9776;</button>
+  <div class="system-title">DISTRICT OFFICER PROFILE</div>
+  <div class="topbar-right">
+    <span class="officer-id">DO12345</span>
+    <a href="#" class="logout-btn">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <h4>CORE</h4>
+      <a href="district_dashboard.html"><img src="icons/home.png" alt=""> Dashboard</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACTIVITIES</h4>
+      <a href="district_farmers.html"><img src="icons/farmer.png" alt=""> Farmers</a>
+      <a href="district_farms.html"><img src="icons/farm.png" alt=""> Farms</a>
+      <a href="district_extension_officers.html"><img src="icons/officer.png" alt=""> Extension Officers</a>
+      <a href="district_market_price.html"><img src="icons/market.png" alt=""> Market Price</a>
+      <a href="district_production_trends.html"><img src="icons/chart.png" alt=""> Production Trends</a>
+    </div>
+    <div class="sidebar-section">
+      <h4>ACCOUNT</h4>
+      <a href="district_profile.html" class="active"><img src="icons/profile.png" alt=""> Profile</a>
+    </div>
+  </div>
+
+  <div class="main" id="main">
+    <div class="profile-card">
+      <h2>Officer Profile</h2>
+      <p><strong>Name:</strong> John Mbele</p>
+      <p><strong>ID:</strong> DO12345</p>
+      <p><strong>Email:</strong> john.mbele@agriculture.go.tz</p>
+      <p><strong>District:</strong> Morogoro District</p>
+    </div>
+
+    <div class="password-section">
+      <h3>Change Password</h3>
+      <form id="changePasswordForm">
+        <input type="password" placeholder="Current Password" required>
+        <input type="password" placeholder="New Password" required>
+        <input type="password" placeholder="Confirm New Password" required>
+        <button type="submit">Update Password</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="footer">© 2025 Ministry of Agriculture</div>
+
+</body>
+</html>
