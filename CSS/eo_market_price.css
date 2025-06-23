@@ -1,0 +1,30 @@
+@import url("eo_dashboard.css");
+
+.main h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.price-table thead {
+  background-color: #3c6e47;
+  color: white;
+}
+
+.price-table th, .price-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-table tr:hover {
+  background-color: #f1f1f1;
+}

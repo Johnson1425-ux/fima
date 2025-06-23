@@ -1,0 +1,212 @@
+@import url("eo_dashboard.css");
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background-color: #6b8e69;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: #587e56;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #6b8e69;
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f0f5f0;
+}
+
+.action-btns button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Removed .edit-btn styles as edit functionality is removed */
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+}
+
+.popup-form { /* Styles for the add farmer form popup */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-form form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.popup-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.popup-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.popup-form .submit-btn {
+    background-color: #6b8e69;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.popup-form .cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Custom Confirmation Pop-up Styles (similar to my_farms.css) */
+.custom-confirm-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.confirm-card {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.95); /* Slightly smaller on load */
+    animation: fadeInScale 0.2s ease-out forwards;
+}
+
+.confirm-card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.confirm-card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.confirm-buttons button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.confirm-yes {
+    background-color: #dc3545; /* Red for delete action */
+    color: white;
+}
+
+.confirm-yes:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.confirm-no {
+    background-color: #6c757d; /* Grey for cancel */
+    color: white;
+}
+
+.confirm-no:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Optional: Animation for the pop-up */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

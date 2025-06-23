@@ -1,0 +1,49 @@
+@import url("eo_dashboard.css");
+
+.main h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.profile-form, .password-form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-form label,
+.password-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #444;
+}
+
+.profile-form input,
+.password-form input {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.save-btn {
+    background-color: #6b8e69;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background-color: #5a7c5a;
+}

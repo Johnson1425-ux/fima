@@ -1,0 +1,53 @@
+@import url("eo_dashboard.css");
+
+.profile-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.password-section {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-section label {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.password-section input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-section button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #6b8e69;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.password-section button:hover {
+  background-color: #587b57;
+}

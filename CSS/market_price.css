@@ -1,0 +1,30 @@
+
+.market-table {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.market-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.market-table th, .market-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.market-table th {
+    background-color: #6b8e69;
+    color: white;
+    font-weight: bold;
+}
+
+.market-table tr:hover {
+    background-color: #f9f9f9;
+}
